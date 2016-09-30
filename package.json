@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/steadyequipment/docker-host-ip.git"
+    "url": "git+ssh://git@github.com/steadyequipment/node-docker-host-ip.git"
   },
   "keywords": [
     "docker",
@@ -19,9 +19,9 @@
   "author": "Ian Grossberg <ian@poursteady.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steadyequipment/docker-host-ip/issues"
+    "url": "https://github.com/steadyequipment/node-docker-host-ip/issues"
   },
-  "homepage": "https://github.com/steadyequipment/docker-host-ip#readme",
+  "homepage": "https://github.com/steadyequipment/node-docker-host-ip#readme",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
