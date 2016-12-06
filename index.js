@@ -29,7 +29,7 @@ const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
 
     	callback(new Error("No results or feedback given"), undefined);
     }
-}
+};
 
 export default function(callback) {
     try {
