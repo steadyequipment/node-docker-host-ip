@@ -3,6 +3,7 @@
 Node module to retrieve the Docker Host IP from within a Docker container
 
 [![codebeat badge](https://codebeat.co/badges/f6bf4c59-1c9c-45c6-9aa8-b2eeabcebfa6)](https://codebeat.co/projects/github-com-steadyequipment-node-docker-host-ip)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6da4127e935f46b69b9235b50e0b421d)](https://www.codacy.com/app/Steadyequipment/node-docker-host-ip?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=steadyequipment/node-docker-host-ip&amp;utm_campaign=Badge_Grade)
 [![dependancies](https://david-dm.org/steadyequipment/node-docker-host-ip.svg)](https://david-dm.org/steadyequipment/node-docker-host-ip)
 
 ## Usage
