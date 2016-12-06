@@ -2,6 +2,8 @@
 
 Node module to retrieve the Docker Host IP from within a Docker container
 
+[![codebeat badge](https://codebeat.co/badges/f6bf4c59-1c9c-45c6-9aa8-b2eeabcebfa6)](https://codebeat.co/projects/github-com-steadyequipment-node-docker-host-ip)
+
 ## Usage
 
 The module is a function that expects to be passed a callback as the only parameter. The callback's parameters should be in standard Node format: `(error, result)`
