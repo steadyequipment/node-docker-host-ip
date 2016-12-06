@@ -2,8 +2,8 @@ import childProcess from 'child_process';
 import isString from 'lodash.isstring';
 
 const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
-	
-	if (stdout && isString(stdout)) {
+    
+    if (stdout && isString(stdout)) {
 
         const output = stdout;
 
@@ -15,19 +15,19 @@ const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
         }
 
         if (ip) {
-        	callback(undefined, ip);
+            callback(undefined, ip);
         } else {
-        	callback(new Error("Unable to find ip, perhaps call while not within a Docker container"), undefined);
+            callback(new Error("Unable to find ip, perhaps call while not within a Docker container"), undefined);
         }        
     } else if (error) {
-	    
-	    callback(error, undefined);
+        
+        callback(error, undefined);
     } else if (stderr) {
 
-    	callback(new Error(stderr), undefined);
+        callback(new Error(stderr), undefined);
     } else {
 
-    	callback(new Error("No results or feedback given"), undefined);
+        callback(new Error("No results or feedback given"), undefined);
     }
 };
 
@@ -37,8 +37,8 @@ export default function(callback) {
         childProcess.execFile("/sbin/ip", ["route"], handleIpRouteResults(callback));                    
     } catch(error) {
 
-    	if (callback) {
-	        callback(error, undefined);
-    	}
+        if (callback) {
+            callback(error, undefined);
+        }
     }
 }
