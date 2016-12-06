@@ -1,6 +1,5 @@
 import childProcess from 'child_process';
 import isString from 'lodash.isstring';
-import isArray from 'lodash.isarray';
 
 const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
 	
@@ -11,7 +10,7 @@ const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
         const match = output.match(/default via ((?:[0-9]{1,3}\.){3}[0-9]{1,3}) dev eth0/);
 
         let ip = undefined;
-        if (isArray(match) && match.length >= 2) {
+        if (Array.isArray(match) && match.length >= 2) {
             ip = match[1];
         }
 
@@ -30,7 +29,7 @@ const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
 
     	callback(new Error("No results or feedback given"), undefined);
     }
-}
+};
 
 export default function(callback) {
     try {
