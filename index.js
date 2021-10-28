@@ -17,17 +17,23 @@ const handleIpRouteResults = (callback) => (error, stdout, stderr) => {
         if (ip) {
             callback(undefined, ip);
         } else {
-            callback(new Error("Unable to find ip, perhaps call while not within a Docker container"), undefined);
+            const error = new Error("Unable to find ip, perhaps call while not within a Docker container");
+            error.code = "DOCKER_IP_NO_RESOLVE";
+            callback(error, undefined);
         }        
     } else if (error) {
         
         callback(error, undefined);
     } else if (stderr) {
 
-        callback(new Error(stderr), undefined);
+        const error = new Error(stderr);
+        error.code = "DOCKER_IP_STDERR";
+        callback(error, undefined);
     } else {
 
-        callback(new Error("No results or feedback given"), undefined);
+        const error = new Error("No results or feedback given");
+        error.code = "DOCKER_IP_EMPTY";
+        callback(error, undefined);
     }
 };
 
